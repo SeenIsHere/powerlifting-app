@@ -3,4 +3,4 @@
 
 </script>
 
-<div>Hi</div>
+<a href="/home">Goto /home</a>

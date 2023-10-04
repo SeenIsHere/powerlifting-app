@@ -5,7 +5,7 @@ import TextPrompt from "$lib/components/TextPrompt.svelte";
 let programs: Array<string> = []
 
 function addPrograms(name: string){
-    programs.push(name)
+    programs.push(JSON.stringify(name))
     programs = programs
 }
 
@@ -16,7 +16,7 @@ let promptForProgramName;
 <TextPrompt 
     bind:this={promptForProgramName} 
     prompt="Name" 
-    on:submit={(ev) => addPrograms(ev.detail)}
+    on:submit={(ev) => { addPrograms(ev) } }
 />
 
 <div class="content">
